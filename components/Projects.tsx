@@ -23,15 +23,6 @@ export default function Projects() {
       featured: true
     },
     {
-      title: 'Emochi Mobile App UI/UX',
-      description: 'Designed intuitive user interfaces for anime-inspired AI interaction app at FlowGPT. Optimized user engagement through streamlined navigation flows and accessibility features.',
-      image: '/project3.jpg',
-      technologies: ['Figma', 'React', 'UI/UX Design', 'Mobile'],
-      liveLink: 'https://flowgpt.com/emochi',
-      githubLink: null,
-      featured: false
-    },
-    {
       title: 'Brain-Machine Interface Review',
       description: 'Comprehensive literature review on neural recording technologies, signal processing methodologies, and material innovations in BMI systems. Focus on EEG, ECoG, and fiber-based interfaces.',
       image: '/project4.jpg',
