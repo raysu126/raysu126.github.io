@@ -3,6 +3,15 @@
 import { ExternalLink, Github } from 'lucide-react'
 
 export default function Projects() {
+  const handleProjectClick = (project: any) => {
+    // For now, just scroll to the project or open link
+    if (project.liveLink) {
+      window.open(project.liveLink, '_blank')
+    } else if (project.githubLink) {
+      window.open(project.githubLink, '_blank')
+    }
+  }
+
   const projects = [
     {
       title: 'EEG Brain Age Prediction',
@@ -40,74 +49,56 @@ export default function Projects() {
       githubLink: 'https://github.com/raysu126/proteomics-pipeline',
       featured: false
     },
-    {
-      title: 'Neural Signal Processing Toolkit',
-      description: 'Custom Python toolkit for EEG preprocessing, artifact rejection, and spectral analysis. Implements advanced filtering and feature extraction for neuroscience research.',
-      image: '/project6.jpg',
-      technologies: ['Python', 'MNE-Python', 'SciPy', 'Signal Processing'],
-      liveLink: null,
-      githubLink: 'https://github.com/raysu126/neural-toolkit',
-      featured: false
-    }
   ]
 
-  const ProjectCard = ({ project, featured = false }: { project: any, featured?: boolean }) => (
-    <div className={`notion-card overflow-hidden notion-hover transition-all ${featured ? 'lg:col-span-2' : ''}`}>
-      {/* Project Image Placeholder */}
-      <div className={`bg-gray-50 border-b notion-border ${featured ? 'h-48' : 'h-40'} flex items-center justify-center`}>
-        <div className="text-center">
-          <div className="w-12 h-12 mx-auto mb-2 rounded-lg bg-gray-100 border notion-border flex items-center justify-center text-gray-600 text-lg font-medium">
-            P
-          </div>
-          <p className="notion-text text-xs">
-            Project Screenshot
-          </p>
-        </div>
+  const ProjectCard = ({ project, onClick }: { project: any, onClick: () => void }) => (
+    <div
+      className="notion-card p-6 notion-hover transition-all cursor-pointer"
+      onClick={onClick}
+    >
+      <h3 className="text-lg notion-heading mb-3">{project.title}</h3>
+      <p className="notion-text mb-4 leading-relaxed text-sm">
+        {project.description}
+      </p>
+
+      {/* Technologies */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {project.technologies.map((tech: string) => (
+          <span
+            key={tech}
+            className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border notion-border"
+          >
+            {tech}
+          </span>
+        ))}
       </div>
 
-      <div className="p-6">
-        <h3 className="text-lg notion-heading mb-3">{project.title}</h3>
-        <p className="notion-text mb-4 leading-relaxed text-sm">
-          {project.description}
-        </p>
-
-        {/* Technologies */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech: string) => (
-            <span
-              key={tech}
-              className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border notion-border"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        {/* Links */}
-        <div className="flex space-x-4 text-sm">
-          {project.liveLink && (
-            <a
-              href={project.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-gray-600 hover:text-black font-medium"
-            >
-              <ExternalLink size={14} className="mr-1" />
-              Live Demo
-            </a>
-          )}
-          {project.githubLink && (
-            <a
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-gray-600 hover:text-black font-medium"
-            >
-              <Github size={14} className="mr-1" />
-              Code
-            </a>
-          )}
-        </div>
+      {/* Links */}
+      <div className="flex space-x-4 text-sm">
+        {project.liveLink && (
+          <a
+            href={project.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-gray-600 hover:text-black font-medium"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ExternalLink size={14} className="mr-1" />
+            Live Demo
+          </a>
+        )}
+        {project.githubLink && (
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-gray-600 hover:text-black font-medium"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Github size={14} className="mr-1" />
+            Code
+          </a>
+        )}
       </div>
     </div>
   )
@@ -127,23 +118,15 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Featured Projects */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} featured />
+        {/* All Projects */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              onClick={() => handleProjectClick(project)}
+            />
           ))}
-        </div>
-
-        {/* Other Projects */}
-        <div className="mb-12">
-          <h3 className="text-2xl notion-heading text-center mb-12">
-            Other Projects
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
-          </div>
         </div>
 
         {/* GitHub CTA */}

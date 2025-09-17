@@ -1,30 +1,7 @@
 'use client'
 
-import { Code, Coffee, Users, Zap } from 'lucide-react'
 
 export default function About() {
-  const highlights = [
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: 'Research Excellence',
-      description: 'Advanced EEG analysis and machine learning research'
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Technical Innovation',
-      description: 'Building cutting-edge neural signal processing tools'
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Interdisciplinary',
-      description: 'Bridging neuroscience, ML, and user experience'
-    },
-    {
-      icon: <Coffee className="w-6 h-6" />,
-      title: 'Problem Solver',
-      description: 'Passionate about solving complex scientific challenges'
-    }
-  ]
 
   return (
     <section id="about" className="py-24 bg-white">
@@ -61,7 +38,7 @@ export default function About() {
 
             <p className="notion-text leading-relaxed">
               I'm currently pursuing dual Bachelor's degrees in Molecular & Cell Biology and
-              Cognitive Science at UC Berkeley (GPA: 3.85). My passion lies at the intersection
+              Cognitive Science at UC Berkeley. My passion lies at the intersection
               of neuroscience, machine learning, and user experience design.
             </p>
 
@@ -90,22 +67,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Highlights */}
-        <div className="mt-24">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {highlights.map((item, index) => (
-              <div key={index} className="text-center p-6 notion-hover rounded-lg">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-gray-100 text-gray-600 rounded-lg mb-4">
-                  {item.icon}
-                </div>
-                <h4 className="text-base notion-heading mb-2">{item.title}</h4>
-                <p className="notion-text text-sm">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )
