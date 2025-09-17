@@ -63,27 +63,30 @@ export default function Skills() {
   )
 
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-900">
+    <section id="skills" className="py-24 bg-white">
       <div className="container-width section-padding">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl notion-heading mb-4">
             Skills & Technologies
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg notion-text max-w-2xl mx-auto">
             Here are the technologies and tools I work with to bring ideas to life
           </p>
         </div>
 
-        {/* Skill Categories with Progress Bars */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Skill Categories */}
+        <div className="grid md:grid-cols-3 gap-12 mb-20 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-6 text-center">
+            <div key={index} className="text-center">
+              <h3 className="text-lg notion-heading mb-6">
                 {category.title}
               </h3>
-              <div>
+              <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <SkillBar key={skillIndex} skill={skill} />
+                  <div key={skillIndex} className="flex justify-between items-center py-2 border-b notion-border last:border-b-0">
+                    <span className="notion-text text-sm">{skill.name}</span>
+                    <span className="text-xs text-gray-500">{skill.level}%</span>
+                  </div>
                 ))}
               </div>
             </div>
@@ -92,14 +95,14 @@ export default function Skills() {
 
         {/* Technology Cloud */}
         <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-8">
+          <h3 className="text-2xl notion-heading mb-8">
             Technologies I Work With
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
             {technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:from-blue-200 hover:to-purple-200 dark:hover:from-blue-800 dark:hover:to-purple-800 transition-all cursor-default"
+                className="px-3 py-2 bg-gray-100 text-gray-700 rounded-full text-sm border notion-border notion-hover cursor-default"
               >
                 {tech}
               </span>
@@ -108,28 +111,28 @@ export default function Skills() {
         </div>
 
         {/* Experience Summary */}
-        <div className="mt-16 grid sm:grid-cols-3 gap-8 text-center">
+        <div className="mt-20 grid sm:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
           <div className="p-6">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+            <div className="text-3xl notion-heading mb-2">
               3.85
             </div>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="notion-text text-sm">
               UC Berkeley GPA
             </p>
           </div>
           <div className="p-6">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+            <div className="text-3xl notion-heading mb-2">
               5+
             </div>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="notion-text text-sm">
               Research Projects
             </p>
           </div>
           <div className="p-6">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+            <div className="text-3xl notion-heading mb-2">
               15+
             </div>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="notion-text text-sm">
               Technologies Used
             </p>
           </div>

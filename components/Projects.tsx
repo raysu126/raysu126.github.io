@@ -52,22 +52,22 @@ export default function Projects() {
   ]
 
   const ProjectCard = ({ project, featured = false }: { project: any, featured?: boolean }) => (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow ${featured ? 'lg:col-span-2' : ''}`}>
+    <div className={`notion-card overflow-hidden notion-hover transition-all ${featured ? 'lg:col-span-2' : ''}`}>
       {/* Project Image Placeholder */}
-      <div className={`bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-700 dark:to-gray-600 ${featured ? 'h-64' : 'h-48'} flex items-center justify-center`}>
+      <div className={`bg-gray-50 border-b notion-border ${featured ? 'h-48' : 'h-40'} flex items-center justify-center`}>
         <div className="text-center">
-          <div className="w-16 h-16 mx-auto mb-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl font-bold">
+          <div className="w-12 h-12 mx-auto mb-2 rounded-lg bg-gray-100 border notion-border flex items-center justify-center text-gray-600 text-lg font-medium">
             P
           </div>
-          <p className="text-gray-600 dark:text-gray-300 text-sm">
+          <p className="notion-text text-xs">
             Project Screenshot
           </p>
         </div>
       </div>
 
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+        <h3 className="text-lg notion-heading mb-3">{project.title}</h3>
+        <p className="notion-text mb-4 leading-relaxed text-sm">
           {project.description}
         </p>
 
@@ -76,7 +76,7 @@ export default function Projects() {
           {project.technologies.map((tech: string) => (
             <span
               key={tech}
-              className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+              className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border notion-border"
             >
               {tech}
             </span>
@@ -84,27 +84,29 @@ export default function Projects() {
         </div>
 
         {/* Links */}
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 text-sm">
           {project.liveLink && (
             <a
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+              className="inline-flex items-center text-gray-600 hover:text-black font-medium"
             >
-              <ExternalLink size={16} className="mr-1" />
+              <ExternalLink size={14} className="mr-1" />
               Live Demo
             </a>
           )}
-          <a
-            href={project.githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-medium"
-          >
-            <Github size={16} className="mr-1" />
-            Code
-          </a>
+          {project.githubLink && (
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-gray-600 hover:text-black font-medium"
+            >
+              <Github size={14} className="mr-1" />
+              Code
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -114,13 +116,13 @@ export default function Projects() {
   const otherProjects = projects.filter(p => !p.featured)
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="projects" className="py-24 bg-gray-50">
       <div className="container-width section-padding">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl notion-heading mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg notion-text max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience
           </p>
         </div>
@@ -133,8 +135,8 @@ export default function Projects() {
         </div>
 
         {/* Other Projects */}
-        <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-center mb-8">
+        <div className="mb-12">
+          <h3 className="text-2xl notion-heading text-center mb-12">
             Other Projects
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -146,16 +148,16 @@ export default function Projects() {
 
         {/* GitHub CTA */}
         <div className="text-center">
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
+          <p className="notion-text mb-6">
             Want to see more of my work?
           </p>
           <a
             href="https://github.com/raysu126"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors"
+            className="notion-button px-6 py-3 font-medium inline-flex items-center"
           >
-            <Github size={20} className="mr-2" />
+            <Github size={16} className="mr-2" />
             View More on GitHub
           </a>
         </div>

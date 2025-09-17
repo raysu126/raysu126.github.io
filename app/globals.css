@@ -8,20 +8,41 @@
   }
 
   body {
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300;
+    @apply bg-white text-black font-sans antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8;
+    @apply px-6 sm:px-8 lg:px-12;
   }
 
   .container-width {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-6xl mx-auto;
   }
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  .notion-heading {
+    @apply text-black font-semibold leading-tight;
+  }
+
+  .notion-text {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .notion-border {
+    @apply border-gray-200;
+  }
+
+  .notion-card {
+    @apply bg-white border border-gray-200 rounded-lg;
+  }
+
+  .notion-hover {
+    @apply hover:bg-gray-50 transition-colors duration-150;
+  }
+
+  .notion-button {
+    @apply border border-gray-300 text-black bg-white hover:bg-gray-50 transition-colors duration-150 rounded-md;
   }
 }
