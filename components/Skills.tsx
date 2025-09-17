@@ -1,6 +1,9 @@
 'use client'
 
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
+
 export default function Skills() {
+  const sectionRef = useScrollAnimation()
   const skills = [
     'Python', 'MATLAB', 'JavaScript', 'React', 'TensorFlow', 'PyTorch',
     'MNE-Python', 'NumPy', 'Pandas', 'SciPy', 'scikit-learn', 'Figma',
@@ -9,7 +12,7 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-24 bg-white">
+    <section ref={sectionRef} id="skills" className="py-24 bg-white scroll-animate">
       <div className="container-width section-padding">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl notion-heading mb-4">

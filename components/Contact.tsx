@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import { Mail, MapPin, Phone, Github, Linkedin, Twitter, Send } from 'lucide-react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Contact() {
+  const sectionRef = useScrollAnimation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -59,21 +61,34 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I\'ll get back to you soon.')
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`${formData.subject} - from ${formData.name}`)
+    const body = encodeURIComponent(`Hi Raymond,
+
+${formData.message}
+
+Best regards,
+${formData.name}
+${formData.email}`)
+
+    const mailtoLink = `mailto:raymondsu@berkeley.edu?subject=${subject}&body=${body}`
+    window.location.href = mailtoLink
+
+    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' })
   }
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section ref={sectionRef} id="contact" className="py-24 bg-white scroll-animate">
       <div className="container-width section-padding">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl notion-heading mb-4">
-            Get In Touch
+            Let's Be Friends! ◈
           </h2>
           <p className="text-lg notion-text max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you!
+            Got a cool project? Need a brain to pick? Or just want to geek out about neural networks?
+            Hit me up – I promise I'm more fun than my EEG data suggests!
           </p>
         </div>
 
@@ -81,11 +96,12 @@ export default function Contact() {
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl notion-heading mb-6">
-              Let's Connect
+              Slide Into My DMs
             </h3>
             <p className="notion-text mb-8 leading-relaxed">
-              I'm always open to discussing new opportunities, interesting projects,
-              or just having a conversation about technology and research.
+              Whether you want to collaborate on something awesome, need help with brain-computer
+              interfaces (I know, oddly specific), or just want to chat about why Python is obviously
+              the best programming language – I'm your person!
             </p>
 
             {/* Contact Details */}
@@ -119,7 +135,7 @@ export default function Contact() {
             {/* Social Links */}
             <div>
               <p className="notion-heading mb-4 text-sm">
-                Follow me on social media
+                Stalk me on the internet (in a friendly way)
               </p>
               <div className="flex space-x-3">
                 {socialLinks.map((social, index) => (
@@ -141,7 +157,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="notion-card p-8">
             <h3 className="text-2xl notion-heading mb-6">
-              Send me a message
+              Drop me a line!
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -205,7 +221,7 @@ export default function Contact() {
                   required
                   rows={5}
                   className="w-full px-4 py-3 border notion-border rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400 bg-white text-black resize-vertical"
-                  placeholder="Tell me about your project or just say hello!"
+                  placeholder="Tell me about your wild ideas, confess your coding sins, or just say hi!"
                 />
               </div>
 

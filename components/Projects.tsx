@@ -1,8 +1,10 @@
 'use client'
 
 import { ExternalLink, Github } from 'lucide-react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Projects() {
+  const sectionRef = useScrollAnimation()
   const handleProjectClick = (project: any) => {
     // For now, just scroll to the project or open link
     if (project.liveLink) {
@@ -107,11 +109,11 @@ export default function Projects() {
   const otherProjects = projects.filter(p => !p.featured)
 
   return (
-    <section id="projects" className="py-24 bg-gray-50">
+    <section ref={sectionRef} id="projects" className="py-24 bg-white scroll-animate">
       <div className="container-width section-padding">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl notion-heading mb-4">
-            Featured Projects
+            Featured Projects ◆
           </h2>
           <p className="text-lg notion-text max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience

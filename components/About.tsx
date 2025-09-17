@@ -1,17 +1,19 @@
 'use client'
 
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function About() {
+  const sectionRef = useScrollAnimation()
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section ref={sectionRef} id="about" className="py-24 bg-white scroll-animate">
       <div className="container-width section-padding">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl notion-heading mb-4">
+          <h2 className="text-3xl md:text-4xl notion-heading mb-4 stagger-1">
             About Me
           </h2>
-          <p className="text-lg notion-text max-w-2xl mx-auto">
-            Get to know me better and learn about my journey as a researcher
+          <p className="text-lg notion-text max-w-2xl mx-auto stagger-2">
+            The story behind the brain waves and bad coding habits
           </p>
         </div>
 
@@ -33,25 +35,25 @@ export default function About() {
           {/* Content */}
           <div className="space-y-6">
             <h3 className="text-2xl notion-heading mb-6">
-              Hello! I'm a computational neuroscience researcher and UI/UX designer.
+              Hey there! I'm basically a professional brain-whisperer and pixel-pusher.
             </h3>
 
             <p className="notion-text leading-relaxed">
-              I'm currently pursuing dual Bachelor's degrees in Molecular & Cell Biology and
-              Cognitive Science at UC Berkeley. My passion lies at the intersection
-              of neuroscience, machine learning, and user experience design.
+              Currently double-majoring in Molecular & Cell Biology and Cognitive Science at UC Berkeley
+              because apparently I enjoy pain. But honestly, there's something magical about understanding
+              how brains work while making computers do cool stuff.
             </p>
 
             <p className="notion-text leading-relaxed">
-              I specialize in EEG signal processing, deep learning for neural data, and creating
-              intuitive user interfaces. My research focuses on brain age prediction using
-              advanced ML models and understanding electrophysiological patterns in sleep disorders.
+              I spend my days teaching machines to read brain waves (EEG analysis), building AI models
+              that probably know more about sleep patterns than I do, and designing interfaces that
+              hopefully don't make users question their life choices.
             </p>
 
             <p className="notion-text leading-relaxed">
-              When I'm not in the lab or designing interfaces, I enjoy exploring the latest
-              developments in computational neuroscience, contributing to research projects,
-              and building tools that bridge the gap between complex science and accessible design.
+              When I'm not debugging code at 3 AM or trying to make sense of squiggly brain signals,
+              you'll find me diving into the latest neuroscience papers, probably with too much coffee
+              and a concerning number of browser tabs open.
             </p>
 
             <div className="pt-6">

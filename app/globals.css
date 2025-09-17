@@ -45,4 +45,27 @@
   .notion-button {
     @apply border border-gray-300 text-black bg-white hover:bg-gray-50 transition-colors duration-150 rounded-md;
   }
+
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-animate.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-animate .stagger-1 {
+    transition-delay: 0.1s;
+  }
+
+  .scroll-animate .stagger-2 {
+    transition-delay: 0.2s;
+  }
+
+  .scroll-animate .stagger-3 {
+    transition-delay: 0.3s;
+  }
 }

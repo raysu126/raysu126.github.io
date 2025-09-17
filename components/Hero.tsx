@@ -24,8 +24,8 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl notion-text mb-12 max-w-3xl mx-auto leading-relaxed">
-            UC Berkeley student passionate about computational neuroscience, machine learning,
-            and creating intuitive user experiences through thoughtful design.
+            UC Berkeley student who gets way too excited about brain waves, teaches computers to think,
+            and designs interfaces that don't make people want to throw their laptops out the window.
           </p>
 
           {/* CTA Buttons */}
@@ -34,13 +34,13 @@ export default function Hero() {
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
               className="notion-button px-6 py-3 font-medium"
             >
-              View My Work
+              Check Out My Stuff
             </button>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="notion-button px-6 py-3 font-medium"
             >
-              Get In Touch
+              Let's Chat!
             </button>
           </div>
 
