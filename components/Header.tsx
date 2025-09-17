@@ -31,7 +31,7 @@ export default function Header({ darkMode, toggleDarkMode }: HeaderProps) {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <h1 className="text-xl font-bold gradient-text">
-              raysu126
+              Raymond Su
             </h1>
           </div>
 

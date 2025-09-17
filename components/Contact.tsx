@@ -15,19 +15,19 @@ export default function Contact() {
     {
       icon: <Mail className="w-5 h-5" />,
       label: 'Email',
-      value: 'raysu126@example.com',
-      link: 'mailto:raysu126@example.com'
+      value: 'raymondsu@berkeley.edu',
+      link: 'mailto:raymondsu@berkeley.edu'
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: 'Available upon request',
+      link: null
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: 'Location',
-      value: 'Your City, Country',
+      value: 'Oakland, CA',
       link: null
     }
   ]
@@ -223,7 +223,7 @@ export default function Contact() {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-gray-600 dark:text-gray-300">
-            © 2025 raysu126. Built with Next.js and TailwindCSS. Deployed on GitHub Pages.
+            © 2025 Raymond Su. Built with Next.js and TailwindCSS. Deployed on GitHub Pages.
           </p>
         </div>
       </div>

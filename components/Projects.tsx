@@ -5,57 +5,57 @@ import { ExternalLink, Github } from 'lucide-react'
 export default function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with modern UI, secure payments, and admin dashboard. Built with React, Node.js, and MongoDB.',
+      title: 'EEG Brain Age Prediction',
+      description: 'Deep learning pipeline for brain age prediction from EEG data in REM Sleep Behavior Disorder patients. Implemented CNN-Transformer hybrid models and spectral power analysis using MNE-Python.',
       image: '/project1.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      liveLink: 'https://your-project.com',
-      githubLink: 'https://github.com/raysu126/project1',
-      featured: true
-    },
-    {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: '/project2.jpg',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-      liveLink: 'https://your-project.com',
-      githubLink: 'https://github.com/raysu126/project2',
-      featured: true
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application that provides detailed forecasts, interactive maps, and location-based weather alerts.',
-      image: '/project3.jpg',
-      technologies: ['Vue.js', 'TailwindCSS', 'OpenWeather API'],
-      liveLink: 'https://your-project.com',
-      githubLink: 'https://github.com/raysu126/project3',
-      featured: false
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website built with Next.js and deployed on GitHub Pages with CI/CD pipeline.',
-      image: '/project4.jpg',
-      technologies: ['Next.js', 'TailwindCSS', 'GitHub Pages'],
-      liveLink: 'https://your-project.com',
-      githubLink: 'https://github.com/raysu126/project4',
-      featured: false
-    },
-    {
-      title: 'Social Media API',
-      description: 'RESTful API for a social media platform with authentication, file uploads, real-time messaging, and comprehensive testing.',
-      image: '/project5.jpg',
-      technologies: ['Express.js', 'JWT', 'Socket.io', 'Jest'],
+      technologies: ['Python', 'TensorFlow', 'MNE-Python', 'scikit-learn'],
       liveLink: null,
-      githubLink: 'https://github.com/raysu126/project5',
+      githubLink: 'https://github.com/raysu126/eeg-brain-age',
+      featured: true
+    },
+    {
+      title: 'Mindful Movies - AI Phobia Filter',
+      description: 'AI-powered mobile app providing phobia-sensitive content filtering for movies. Features personalized trigger detection and anxiety-free entertainment recommendations using behavioral psychology insights.',
+      image: '/project2.jpg',
+      technologies: ['React', 'JavaScript', 'AI/ML', 'Mobile Design'],
+      liveLink: 'https://mindful-movies.app',
+      githubLink: 'https://github.com/raysu126/mindful-movies',
+      featured: true
+    },
+    {
+      title: 'Emochi Mobile App UI/UX',
+      description: 'Designed intuitive user interfaces for anime-inspired AI interaction app at FlowGPT. Optimized user engagement through streamlined navigation flows and accessibility features.',
+      image: '/project3.jpg',
+      technologies: ['Figma', 'React', 'UI/UX Design', 'Mobile'],
+      liveLink: 'https://flowgpt.com/emochi',
+      githubLink: null,
       featured: false
     },
     {
-      title: 'Data Visualization Tool',
-      description: 'Interactive data visualization dashboard with charts, filters, and export functionality for business analytics.',
+      title: 'Brain-Machine Interface Review',
+      description: 'Comprehensive literature review on neural recording technologies, signal processing methodologies, and material innovations in BMI systems. Focus on EEG, ECoG, and fiber-based interfaces.',
+      image: '/project4.jpg',
+      technologies: ['Research', 'Neuroscience', 'Signal Processing', 'Academic Writing'],
+      liveLink: null,
+      githubLink: 'https://github.com/raysu126/bmi-review',
+      featured: false
+    },
+    {
+      title: 'Proteomics LC-MS/MS Analysis',
+      description: 'High-resolution DIA data analysis pipeline for protein identification and quantification. Automated QC workflows and sample preparation protocols achieving >98% instrument uptime.',
+      image: '/project5.jpg',
+      technologies: ['Python', 'Mass Spectrometry', 'Data Analysis', 'QC Automation'],
+      liveLink: null,
+      githubLink: 'https://github.com/raysu126/proteomics-pipeline',
+      featured: false
+    },
+    {
+      title: 'Neural Signal Processing Toolkit',
+      description: 'Custom Python toolkit for EEG preprocessing, artifact rejection, and spectral analysis. Implements advanced filtering and feature extraction for neuroscience research.',
       image: '/project6.jpg',
-      technologies: ['React', 'D3.js', 'Chart.js', 'Python'],
-      liveLink: 'https://your-project.com',
-      githubLink: 'https://github.com/raysu126/project6',
+      technologies: ['Python', 'MNE-Python', 'SciPy', 'Signal Processing'],
+      liveLink: null,
+      githubLink: 'https://github.com/raysu126/neural-toolkit',
       featured: false
     }
   ]

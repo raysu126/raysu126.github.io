@@ -20,13 +20,13 @@ export default function Hero() {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Hi, I'm{' '}
-            <span className="gradient-text">raysu126</span>
+            <span className="gradient-text">Raymond Su</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Full-Stack Developer passionate about creating amazing web experiences
-            and solving complex problems with clean, efficient code.
+            UC Berkeley student passionate about computational neuroscience, machine learning,
+            and creating intuitive user experiences through thoughtful design.
           </p>
 
           {/* CTA Buttons */}
@@ -66,7 +66,7 @@ export default function Hero() {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:raysu126@example.com"
+              href="mailto:raymondsu@berkeley.edu"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               aria-label="Email"
             >

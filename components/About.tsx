@@ -6,23 +6,23 @@ export default function About() {
   const highlights = [
     {
       icon: <Code className="w-6 h-6" />,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable, and efficient code'
+      title: 'Research Excellence',
+      description: 'Advanced EEG analysis and machine learning research'
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Fast Learner',
-      description: 'Quick to adapt to new technologies and frameworks'
+      title: 'Technical Innovation',
+      description: 'Building cutting-edge neural signal processing tools'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Team Player',
-      description: 'Collaborative approach to problem-solving'
+      title: 'Interdisciplinary',
+      description: 'Bridging neuroscience, ML, and user experience'
     },
     {
       icon: <Coffee className="w-6 h-6" />,
-      title: 'Passionate',
-      description: 'Love for coding and continuous improvement'
+      title: 'Problem Solver',
+      description: 'Passionate about solving complex scientific challenges'
     }
   ]
 
@@ -42,25 +42,25 @@ export default function About() {
           {/* Content */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-4">
-              Hello! I'm a passionate full-stack developer.
+              Hello! I'm a computational neuroscience researcher and UI/UX designer.
             </h3>
 
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I'm a software developer with a passion for creating digital experiences
-              that make a difference. My journey in tech started [X years ago] when I
-              discovered the power of code to solve real-world problems.
+              I'm currently pursuing dual Bachelor's degrees in Molecular & Cell Biology and
+              Cognitive Science at UC Berkeley (GPA: 3.85). My passion lies at the intersection
+              of neuroscience, machine learning, and user experience design.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I specialize in building modern web applications using cutting-edge
-              technologies. I love working on projects that challenge me to learn
-              new things and push the boundaries of what's possible.
+              I specialize in EEG signal processing, deep learning for neural data, and creating
+              intuitive user interfaces. My research focuses on brain age prediction using
+              advanced ML models and understanding electrophysiological patterns in sleep disorders.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              When I'm not coding, you can find me [add your hobbies/interests],
-              contributing to open source projects, or exploring the latest trends
-              in technology.
+              When I'm not in the lab or designing interfaces, I enjoy exploring the latest
+              developments in computational neuroscience, contributing to research projects,
+              and building tools that bridge the gap between complex science and accessible design.
             </p>
 
             <div className="pt-4">

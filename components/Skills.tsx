@@ -3,44 +3,44 @@
 export default function Skills() {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'Programming & ML',
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'TypeScript', level: 80 },
-        { name: 'TailwindCSS', level: 85 },
-        { name: 'Vue.js', level: 75 },
-        { name: 'JavaScript', level: 90 }
+        { name: 'Python', level: 95 },
+        { name: 'MATLAB', level: 85 },
+        { name: 'JavaScript', level: 80 },
+        { name: 'TensorFlow/Keras', level: 85 },
+        { name: 'scikit-learn', level: 90 },
+        { name: 'NumPy/Pandas', level: 95 }
       ]
     },
     {
-      title: 'Backend',
+      title: 'Neuroscience & Data',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
-        { name: 'Python', level: 75 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'REST APIs', level: 85 }
+        { name: 'MNE-Python', level: 90 },
+        { name: 'SciPy', level: 85 },
+        { name: 'EEG Analysis', level: 90 },
+        { name: 'Signal Processing', level: 85 },
+        { name: 'PCR & Gel Electrophoresis', level: 80 },
+        { name: 'Western Blotting', level: 75 }
       ]
     },
     {
-      title: 'Tools & Others',
+      title: 'Design & Web',
       skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 70 },
-        { name: 'AWS', level: 65 },
-        { name: 'Figma', level: 75 },
-        { name: 'Jest', level: 80 },
-        { name: 'CI/CD', level: 70 }
+        { name: 'Figma', level: 90 },
+        { name: 'React', level: 80 },
+        { name: 'HTML/CSS', level: 85 },
+        { name: 'Photoshop', level: 75 },
+        { name: 'UI/UX Design', level: 85 },
+        { name: 'Framer', level: 70 }
       ]
     }
   ]
 
   const technologies = [
-    'React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL',
-    'MongoDB', 'TailwindCSS', 'Git', 'Docker', 'AWS', 'Express.js',
-    'Vue.js', 'GraphQL', 'Jest', 'Prisma', 'Firebase', 'Vercel'
+    'Python', 'MATLAB', 'JavaScript', 'React', 'TensorFlow', 'PyTorch',
+    'MNE-Python', 'NumPy', 'Pandas', 'SciPy', 'scikit-learn', 'Figma',
+    'Photoshop', 'Illustrator', 'HTML/CSS', 'EEG', 'Signal Processing', 'Arduino'
   ]
 
   const SkillBar = ({ skill }: { skill: { name: string; level: number } }) => (
@@ -111,26 +111,26 @@ export default function Skills() {
         <div className="mt-16 grid sm:grid-cols-3 gap-8 text-center">
           <div className="p-6">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              2+
+              3.85
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Years of Experience
+              UC Berkeley GPA
             </p>
           </div>
           <div className="p-6">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              25+
+              5+
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Projects Completed
+              Research Projects
             </p>
           </div>
           <div className="p-6">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              10+
+              15+
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Technologies Mastered
+              Technologies Used
             </p>
           </div>
         </div>
